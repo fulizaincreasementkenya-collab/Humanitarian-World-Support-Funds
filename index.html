@@ -4,781 +4,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#06254b">
-<title>Humanitarian World Support Funds | Africa</title>
-<meta name="description" content="Humanitarian programme information and support enquiries across Africa.">
-
+<meta name="theme-color" content="#0758a5">
+<title>Humanitarian World Support | Africa</title>
 <style>
-:root{
- --navy:#06254b;--blue:#0757a6;--bright:#1684df;--gold:#f2c66d;
- --ink:#17283d;--muted:#69798c;--pale:#edf6ff;--line:#e0e9f3;
- --green:#13864d;--white:#fff;--shadow:0 18px 50px #06254b16;
- --radius:22px
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:Arial,Helvetica,sans-serif;background:#f7faff;color:var(--ink);line-height:1.65}
-a{text-decoration:none;color:inherit}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-img{width:100%;display:block;object-fit:cover}
-.container{width:min(1200px,92%);margin:auto}
-section{padding:76px 0}
-h1,h2,h3{line-height:1.15;letter-spacing:-.4px}
-h1{font-size:clamp(2.5rem,6vw,5rem)}
-h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:17px}
-h3{font-size:1.2rem;margin-bottom:10px}
-p{color:var(--muted)}
-.eyebrow{display:inline-block;color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:1.6px;font-size:.75rem;margin-bottom:15px}
-.eyebrow:before{content:"";display:inline-block;width:24px;height:3px;background:var(--gold);vertical-align:middle;margin-right:9px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:14px 21px;font-weight:800;transition:.25s}
-.btn:hover{transform:translateY(-3px)}
-.primary{background:var(--blue);color:white;box-shadow:0 8px 20px #0757a633}
-.gold{background:var(--gold);color:#30230a}
-.white{background:white;color:var(--navy)}
-.green{background:var(--green);color:white}
-.center{text-align:center}
-.section-head{max-width:760px;margin:0 auto 38px}
-.grid{display:grid;gap:22px}
-.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
-.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:0 7px 25px #06254b08;transition:.3s}
-.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.icon{width:54px;height:54px;display:grid;place-items:center;border-radius:16px;background:var(--pale);font-size:1.6rem;margin-bottom:18px}
-.small{font-size:.82rem}
-.topbar{background:var(--navy);color:#dceaff;font-size:.82rem;padding:9px 0}
-.topbar .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.nav{position:sticky;top:0;z-index:100;background:#ffffffed;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
-.navinner{height:78px;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.brand{display:flex;align-items:center;gap:11px;min-width:0}
-.logo{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;color:white;background:linear-gradient(140deg,var(--navy),var(--bright));font-size:1.6rem;box-shadow:0 7px 20px #0757a633}
-.brand strong{display:block;font-size:.92rem;line-height:1.3;color:var(--navy)}
-.brand small{font-size:.68rem;letter-spacing:1.5px;color:var(--muted)}
-.navlinks{display:flex;align-items:center;gap:20px}
-.navlinks a{font-size:.87rem;font-weight:700}
-.navlinks a:hover{color:var(--blue)}
-#menu{display:none;border:0;background:none;font-size:1.8rem;color:var(--navy)}
-.hero{min-height:650px;display:flex;align-items:center;color:white;position:relative;overflow:hidden;background:linear-gradient(100deg,#041a36e8,#073b79bb,#06254b55),url("https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=2000&q=85") center/cover}
-.hero:after{content:"";position:absolute;width:500px;height:500px;border:1px solid #ffffff2a;border-radius:50%;right:-180px;bottom:-250px;box-shadow:0 0 0 65px #ffffff09,0 0 0 130px #ffffff08}
-.hero-content{position:relative;z-index:1;padding:75px 0;max-width:830px}
-.hero .eyebrow{color:#ffe3a2}
-.hero h1{margin-bottom:22px}
-.hero h1 span{color:var(--gold)}
-.hero p{color:#e2eeff;font-size:1.08rem;max-width:680px;margin-bottom:27px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.stats{display:flex;gap:35px;flex-wrap:wrap;margin-top:36px}
-.stats strong{display:block;font-size:1.4rem}
-.stats span{font-size:.8rem;color:#d8e7fb}
-.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.aboutimg{position:relative}
-.aboutimg img{height:475px;border-radius:26px}
-.floatnote{position:absolute;right:-15px;bottom:22px;background:white;padding:20px;border-radius:17px;max-width:240px;box-shadow:var(--shadow)}
-.floatnote strong{color:var(--navy)}
-.checklist{list-style:none;display:grid;gap:12px;margin:22px 0}
-.checklist li:before{content:"✓";color:var(--green);font-weight:900;margin-right:10px}
-.soft{background:#edf6ff}
-.program .num{font-size:.74rem;font-weight:900;color:var(--blue);letter-spacing:1.5px;margin-bottom:14px}
-.program{border-top:4px solid var(--gold)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
-.step{background:white;border:1px solid var(--line);border-radius:17px;padding:23px}
-.step b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--navy);color:white;margin-bottom:17px}
-.gallerycard{padding:0;overflow:hidden}
-.gallerycard img{height:220px}
-.gallerycard div{padding:20px}
-.application{background:linear-gradient(140deg,#041c39,#0a4c8e);color:white}
-.application h2{color:white}
-.application .section-head p{color:#d8e8fc}
-.applygrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:28px;align-items:start}
-.sideinfo{border:1px solid #ffffff30;background:#ffffff0b;border-radius:22px;padding:27px}
-.sideinfo p,.sideinfo li{color:#dfebfb}
-.sideinfo ul{list-style:none;display:grid;gap:13px;margin-top:20px}
-.formcard{background:white;color:var(--ink);padding:30px;border-radius:23px;box-shadow:0 25px 70px #0003}
-.formcard>p{font-size:.9rem;margin:7px 0 23px}
-.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.field{display:flex;flex-direction:column;gap:7px;min-width:0}
-.field.full{grid-column:1/-1}
-.field label{font-weight:800;font-size:.84rem;color:#354960}
-.field input,.field select,.field textarea{width:100%;min-width:0;border:1px solid #dce5ef;border-radius:11px;padding:13px;background:#fbfdff;color:var(--ink);outline:none}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--bright);box-shadow:0 0 0 3px #1684df1c}
-.field textarea{min-height:100px;resize:vertical}
-.phonebox{display:grid;grid-template-columns:112px 1fr;gap:8px}
-.prefix{display:flex;align-items:center;justify-content:center;border:1px solid #dce5ef;border-radius:11px;background:#edf6ff;color:var(--navy);font-weight:900;padding:10px}
-.currencybox{display:flex;align-items:center;gap:10px;background:#edf6ff;border:1px solid #d5e9fb;border-radius:11px;padding:13px}
-.currencybox strong{font-size:1.1rem;color:var(--blue)}
-.consent{display:flex;gap:10px;margin-top:17px;font-size:.82rem;color:var(--muted);align-items:flex-start}
-.consent input{margin-top:5px}
-.summary{display:none;margin-top:23px;padding:20px;border:1px solid var(--line);border-radius:15px}
-.summaryrow{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.88rem}
-.summaryrow span{color:var(--muted)}
-.formactions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.formactions .btn{flex:1}
-.progress{display:none;margin-top:20px}
-.track{height:9px;background:#e5edf6;border-radius:20px;overflow:hidden;margin:10px 0}
-.bar{width:0;height:100%;background:linear-gradient(90deg,var(--blue),#48c3f2);transition:width .2s}
-.faqgrid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
-.faqs{display:grid;gap:11px}
-details{background:white;border:1px solid var(--line);border-radius:13px;padding:17px}
-summary{cursor:pointer;font-weight:800;color:var(--navy)}
-details p{font-size:.9rem;margin-top:12px}
-.chat{background:white;border:1px solid var(--line);border-radius:22px;padding:23px;box-shadow:var(--shadow)}
-.chathead{display:flex;align-items:center;gap:12px;padding-bottom:15px;border-bottom:1px solid var(--line)}
-.avatar{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:white;font-size:1.4rem}
-.chatstatus{font-size:.77rem;color:var(--green)}
-.messages{height:260px;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:18px 0}
-.bubble{max-width:92%;padding:12px 14px;border-radius:14px;background:#eef5fc;font-size:.88rem;align-self:flex-start}
-.bubble.me{align-self:flex-end;background:#d8f7e5}
-.chatcontrols{display:flex;gap:8px}
-.chatcontrols select{min-width:0;flex:1;border:1px solid var(--line);border-radius:10px;padding:10px}
-.cta{background:var(--gold);padding:42px 0}
-.ctainner{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.cta h2{font-size:clamp(1.7rem,3vw,2.6rem);color:#38290b;margin-bottom:8px}
-.cta p{color:#5c471c}
-footer{background:#041a34;color:white;padding:55px 0 20px}
-.footgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
-footer h3{color:white;margin-bottom:15px}
-footer p,footer li,footer a{font-size:.86rem;color:#b8cce4}
-footer ul{list-style:none;display:grid;gap:9px}
-footer a:hover{color:var(--gold)}
-.footbottom{border-top:1px solid #ffffff22;margin-top:30px;padding-top:18px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.floatactions{position:fixed;z-index:99;right:17px;bottom:20px;display:flex;flex-direction:column;gap:12px}
-.floatbtn{height:54px;width:54px;border-radius:50%;display:grid;place-items:center;color:white;font-size:1.5rem;box-shadow:0 8px 24px #0003;animation:bob 2.5s infinite}
-.floatbtn.wa{background:#159b57}.floatbtn.call{background:var(--blue)}
-@keyframes bob{50%{transform:translateY(-6px)}}
-.reveal{opacity:0;transform:translateY(18px);transition:.65s}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:950px){
- .navlinks{gap:10px}.navlinks a{font-size:.78rem}
- .g4{grid-template-columns:repeat(2,1fr)}
- .applygrid{grid-template-columns:1fr}.footgrid{grid-template-columns:repeat(2,1fr)}
- .steps{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:720px){
- section{padding:57px 0}
- .navinner{height:70px}
- #menu{display:block}
- .navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:white;padding:17px 5%;flex-direction:column;align-items:stretch;box-shadow:var(--shadow)}
- .navlinks.open{display:flex}
- .navlinks a{font-size:.94rem;padding:10px 0;border-bottom:1px solid var(--line)}
- .hero{min-height:590px}
- .hero-content{padding:55px 0}
- .hero .actions .btn{width:100%}
- .stats{gap:19px}
- .g3{grid-template-columns:1fr}
- .aboutgrid,.faqgrid{grid-template-columns:1fr}
- .aboutimg img{height:340px}
- .floatnote{right:8px;bottom:10px}
- .formcard{padding:22px}
- .formgrid{grid-template-columns:1fr}
- .field.full{grid-column:auto}
- .ctainner{align-items:flex-start;flex-direction:column}
- .footgrid{grid-template-columns:1fr 1fr;gap:22px}
- .footgrid>div:first-child{grid-column:1/-1}
- .chatcontrols{flex-direction:column}
-}
-@media(max-width:420px){
- .brand strong{font-size:.76rem}.brand small{font-size:.59rem}
- .logo{width:42px;height:42px}
- .g4,.steps{grid-template-columns:1fr}
- .phonebox{grid-template-columns:95px 1fr}
- .footgrid{grid-template-columns:1fr}.footgrid>div:first-child{grid-column:auto}
- .formactions{flex-direction:column}
-}
+:root{--blue:#0758a5;--bright:#1688e8;--navy:#092442;--pale:#edf6ff;--gold:#e9bd62;--ink:#1b2c40;--muted:#6b7b8e;--line:#dce7f2;--green:#16834b;--red:#d93636;--shadow:0 15px 40px #0b3b6814}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f5f9fe;line-height:1.55}button,input,select,textarea{font:inherit}button,a{cursor:pointer}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}.top{background:var(--navy);color:#e6f1ff;text-align:center;padding:8px;font-size:12px;letter-spacing:.3px}.nav{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy);font-size:13px}.brandmark{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;color:white;font-size:24px;background:linear-gradient(145deg,var(--navy),var(--bright));box-shadow:0 8px 18px #0758a52b}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:1.5px}.links{display:flex;align-items:center;gap:18px;font-size:13px;font-weight:700}.links a:hover{color:var(--bright)}.btn{border:0;border-radius:12px;padding:13px 17px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--blue);color:white;box-shadow:0 8px 20px #0758a526}.light{background:white;border:1px solid var(--line);color:var(--navy)}.gold{background:var(--gold);color:#38290b}#menu{display:none;background:none;border:0;font-size:25px;color:var(--navy)}.hero{position:relative;overflow:hidden;background:linear-gradient(100deg,#061a33f2,#0758a5d9,#06264b70),url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1800&q=85') center/cover;color:white}.heroIn{padding:85px 0 78px;max-width:780px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:900;color:var(--bright);display:block;margin-bottom:13px}.hero .eyebrow{color:#ffe1a0}.hero h1{font-size:clamp(38px,6vw,70px);line-height:1.04;letter-spacing:-2px;margin:0 0 20px}.hero h1 span{color:#f6d38a}.hero p{color:#e2edfc;max-width:650px;font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:35px}.stats strong{display:block;font-size:18px}.stats small{color:#d5e6fa}.section{padding:68px 0}.head{text-align:center;max-width:730px;margin:0 auto 32px}.head h2,.about h2{font-size:clamp(27px,4vw,42px);line-height:1.15;margin:0 0 12px;color:var(--navy)}.head p,.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:21px;padding:23px;box-shadow:var(--shadow);transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 20px 45px #0b3b6821}.ico{width:51px;height:51px;border-radius:15px;display:grid;place-items:center;background:var(--pale);font-size:24px;margin-bottom:15px}.card h3{margin:0 0 8px;color:var(--navy)}.card p{margin:0;color:var(--muted);font-size:14px}.about{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}.about img{width:100%;height:370px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow)}.check{padding-left:0;list-style:none;display:grid;gap:10px}.check li:before{content:"✓";font-weight:900;color:var(--green);margin-right:9px}.soft{background:#edf5ff}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#fff;padding:20px;border-radius:17px;border:1px solid var(--line);box-shadow:var(--shadow)}.step b{display:grid;place-items:center;background:var(--navy);color:#fff;width:35px;height:35px;border-radius:50%;margin-bottom:13px}.application{background:linear-gradient(135deg,#061c37,#0a4b87);color:white}.application .head h2{color:white}.application .head p{color:#d7e8fc}.applygrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:22px;align-items:start}.aside{background:#ffffff0e;border:1px solid #ffffff30;padding:25px;border-radius:21px;position:sticky;top:95px}.aside p,.aside li{color:#e0edfc}.aside ul{padding-left:18px;display:grid;gap:12px}.formcard{background:#fff;color:var(--ink);padding:27px;border-radius:23px;box-shadow:0 25px 65px #0003}.formcard>p{color:var(--muted);font-size:13px}.progressline{display:flex;gap:7px;margin:20px 0 25px}.progressline span{height:5px;border-radius:20px;flex:1;background:#e5edf6}.progressline span.active{background:var(--bright)}.formstep{display:none}.formstep.active{display:block;animation:appear .3s ease}@keyframes appear{from{opacity:.2;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}.stephead{display:flex;align-items:center;gap:12px;margin:0 0 18px}.stepnum{background:var(--pale);color:var(--blue);font-weight:900;border-radius:12px;padding:10px 13px}.stephead h3{margin:0;color:var(--navy)}.stephead p{margin:3px 0 0;font-size:12px;color:var(--muted)}.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{min-width:0;display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:800;color:#344960}.field input,.field select,.field textarea{width:100%;min-width:0;padding:12px;border:1px solid #d8e3ef;border-radius:11px;background:#fbfdff;outline:none;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--bright);box-shadow:0 0 0 3px #1688e81b}.field textarea{min-height:95px;resize:vertical}.hint{font-size:11px;color:var(--muted)}.phonebox{display:grid;grid-template-columns:94px 1fr;gap:7px}.prefix{display:grid;place-items:center;background:var(--pale);border:1px solid var(--line);border-radius:11px;font-weight:900;color:var(--blue)}.currency{background:var(--pale);border:1px solid var(--line);padding:12px;border-radius:11px;min-height:44px}.uploadbox{border:1.5px dashed #9dbbd9;background:#f5faff;border-radius:15px;padding:16px}.uploadbox input[type=file]{background:white;font-size:12px;padding:8px}.preview{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.preview img{width:110px;height:100px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}.preview .empty{font-size:12px;color:var(--muted)}.notice{font-size:12px;padding:12px;border-radius:11px;background:#fff8e7;border:1px solid #f1dfa9;color:#614b16;margin:13px 0}.camera{background:#071a2d;border-radius:16px;overflow:hidden;position:relative;margin-top:10px;min-height:240px;display:grid;place-items:center}.camera video{display:block;width:100%;max-height:420px;object-fit:cover;transform:scaleX(-1)}.camera video.hidden{display:none}.camera .cameraPlaceholder{color:#cfe3fa;text-align:center;padding:25px}.camera .cameraPlaceholder.hidden{display:none}.cameraActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.status{border-radius:11px;padding:11px 13px;font-size:12px;font-weight:800;margin-top:10px;background:#f1f5f9;color:#46566a}.status.good{background:#e6f8ed;color:#116a3b}.status.bad{background:#fff0f0;color:#b42323}.status.warn{background:#fff8e7;color:#79540b}.consent{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:var(--muted);margin-top:15px}.consent input{margin-top:4px}.formnav{display:flex;justify-content:space-between;gap:10px;margin-top:23px}.formnav .btn{min-width:105px}.summary{display:none;border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:18px}.summaryrow{display:flex;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px solid var(--line);font-size:12px}.summaryrow span{color:var(--muted)}.faq{display:grid;gap:12px;max-width:800px;margin:auto}details{background:white;border:1px solid var(--line);border-radius:14px;padding:17px}summary{font-weight:800;cursor:pointer;color:var(--navy)}details p{font-size:13px;color:var(--muted)}.cta{background:var(--gold);padding:35px 0}.ctain{display:flex;justify-content:space-between;align-items:center;gap:20px}.ctain h2{margin:0;color:#3b2c0e}.ctain p{margin:5px 0;color:#5b481f}footer{background:#04172c;color:white;padding:45px 0 20px}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}footer p,footer a{font-size:13px;color:#c4d6eb}footer h3{margin-top:0}footer ul{list-style:none;padding:0;display:grid;gap:8px}.footbottom{border-top:1px solid #ffffff24;margin-top:25px;padding-top:15px;font-size:12px;color:#b8cce4}.floaters{position:fixed;right:15px;bottom:17px;z-index:8;display:grid;gap:10px}.floaters a{width:49px;height:49px;border-radius:50%;display:grid;place-items:center;color:white;font-size:22px;box-shadow:0 7px 22px #0003;animation:bob 2.5s infinite}.floaters .wa{background:#159b57}.floaters .call{background:var(--blue)}@keyframes bob{50%{transform:translateY(-5px)}}@media(max-width:850px){.links{display:none;position:absolute;top:72px;left:0;right:0;padding:16px 4%;background:white;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.links.open{display:flex}.links a{padding:8px}#menu{display:block}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.applygrid{grid-template-columns:1fr}.aside{position:static}.steps{grid-template-columns:repeat(2,1fr)}.footgrid{grid-template-columns:1fr 1fr}.footgrid>div:first-child{grid-column:1/-1}}@media(max-width:560px){.heroIn{padding:60px 0}.hero h1{letter-spacing:-1px}.hero .actions .btn{width:100%}.stats{gap:17px}.section{padding:50px 0}.grid,.about,.fields,.steps,.footgrid{grid-template-columns:1fr}.about img{height:280px}.field.full{grid-column:auto}.formcard{padding:18px}.ctain{align-items:flex-start;flex-direction:column}.footgrid>div:first-child{grid-column:auto}.brand{font-size:11px}.formnav .btn{padding:12px 10px;min-width:0}.camera{min-height:200px}}
 </style>
 </head>
-
 <body>
-<div class="topbar">
- <div class="container">
-  <span>🌍 Connecting communities across Africa</span>
-  <span>Humanitarian information · Programme enquiries</span>
- </div>
-</div>
-
-<header class="nav">
- <div class="container navinner">
-  <a href="#home" class="brand">
-   <div class="logo">♡</div>
-   <div>
-    <strong>HUMANITARIAN WORLD</strong>
-    <small>SUPPORT FUNDS · AFRICA</small>
-   </div>
-  </a>
-  <button id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-  <nav class="navlinks" id="navlinks">
-   <a href="#home">Home</a>
-   <a href="#about">About</a>
-   <a href="#programmes">Programmes</a>
-   <a href="#gallery">Gallery</a>
-   <a href="#faq">Help centre</a>
-   <a href="#apply" class="btn primary">Apply / Enquire ↗</a>
-  </nav>
- </div>
-</header>
-
+<div class="top">🌍 HUMANITARIAN SUPPORT ENQUIRIES · AFRICA</div>
+<header class="nav"><div class="container navin">
+<a class="brand" href="#home"><span class="brandmark">♡</span><span>HUMANITARIAN WORLD<small>SUPPORT ENQUIRIES · AFRICA</small></span></a>
+<button id="menu" aria-label="Open navigation">☰</button>
+<nav class="links" id="links"><a href="#home">Home</a><a href="#about">About</a><a href="#programmes">Programmes</a><a href="#faq">FAQs</a><a href="#apply" class="btn primary">Start Application ↗</a></nav>
+</div></header>
 <main>
-<section class="hero" id="home">
- <div class="container hero-content">
-  <span class="eyebrow">Together for a stronger Africa</span>
-  <h1>Hope for families.<br><span>Opportunity for all.</span></h1>
-  <p>Explore humanitarian support information and community programme enquiries across African countries. Choose your country, select your local currency and tell us what support information you need.</p>
-  <div class="actions">
-   <a href="#programmes" class="btn gold">Explore programmes ↗</a>
-   <a href="#apply" class="btn white">Start an enquiry</a>
-  </div>
-  <div class="stats">
-   <div><strong>54 Countries</strong><span>Africa country selector</span></div>
-   <div><strong>Local Currency</strong><span>Currency changes by country</span></div>
-   <div><strong>People First</strong><span>Community-centred approach</span></div>
-  </div>
- </div>
-</section>
-
-<section id="about">
- <div class="container aboutgrid">
-  <div class="aboutimg reveal">
-   <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1100&q=85" alt="Children in a community setting" loading="lazy">
-   <div class="floatnote"><strong>People before everything.</strong><p class="small">Human dignity, care and opportunity belong at the heart of humanitarian work.</p></div>
-  </div>
-  <div class="reveal">
-   <span class="eyebrow">About our mission</span>
-   <h2>Stronger communities begin with care.</h2>
-   <p>Humanitarian initiatives can help communities access information, essential services, educational opportunities and livelihood support. Each programme should communicate its objectives, eligibility rules and application process clearly.</p>
-   <ul class="checklist">
-    <li>Community wellbeing and family support information</li>
-    <li>Education and skills-development guidance</li>
-    <li>Emergency support and referral information</li>
-    <li>Clear communication throughout the enquiry process</li>
-   </ul>
-   <a href="#process" class="btn primary">Discover the process →</a>
-  </div>
- </div>
-</section>
-
-<section class="soft" id="programmes">
- <div class="container">
-  <div class="section-head center reveal">
-   <span class="eyebrow">Our areas of focus</span>
-   <h2>Explore support programmes.</h2>
-   <p>Choose the area that best describes your enquiry. Availability and eligibility depend on the actual programme terms.</p>
-  </div>
-  <div class="grid g3">
-   <article class="card program reveal"><div class="num">PROGRAMME 01</div><div class="icon">🏠</div><h3>Family wellbeing</h3><p>Information on household needs, essential services and family stability.</p><a class="btn primary" href="#apply" data-program="Family wellbeing">Enquire →</a></article>
-   <article class="card program reveal"><div class="num">PROGRAMME 02</div><div class="icon">📚</div><h3>Education support</h3><p>Learning resources, educational opportunities and relevant referrals.</p><a class="btn primary" href="#apply" data-program="Education support">Enquire →</a></article>
-   <article class="card program reveal"><div class="num">PROGRAMME 03</div><div class="icon">🌱</div><h3>Livelihoods</h3><p>Information about skills development, livelihoods and self-reliance initiatives.</p><a class="btn primary" href="#apply" data-program="Livelihoods">Enquire →</a></article>
-   <article class="card program reveal"><div class="num">PROGRAMME 04</div><div class="icon">🧰</div><h3>Emergency relief</h3><p>Support-pathway information and referrals during challenging circumstances.</p><a class="btn primary" href="#apply" data-program="Emergency relief">Enquire →</a></article>
-   <article class="card program reveal"><div class="num">PROGRAMME 05</div><div class="icon">🤝</div><h3>Community development</h3><p>Community-led initiatives that encourage inclusion and local solutions.</p><a class="btn primary" href="#apply" data-program="Community development">Enquire →</a></article>
-   <article class="card program reveal"><div class="num">PROGRAMME 06</div><div class="icon">💬</div><h3>General support enquiry</h3><p>Ask for programme information, application guidance or eligibility details.</p><a class="btn primary" href="#apply" data-program="General support enquiry">Enquire →</a></article>
-  </div>
- </div>
-</section>
-
-<section id="process">
- <div class="container">
-  <div class="section-head center reveal"><span class="eyebrow">How it works</span><h2>A clear path from enquiry to review.</h2><p>Use the website to prepare an enquiry and communicate with the programme contact.</p></div>
-  <div class="steps">
-   <article class="step reveal"><b>01</b><h3>Choose your country</h3><p class="small">Select your country to load its calling code and currency.</p></article>
-   <article class="step reveal"><b>02</b><h3>Complete the form</h3><p class="small">Enter your contact details and the amount you want to enquire about.</p></article>
-   <article class="step reveal"><b>03</b><h3>Review your details</h3><p class="small">Check your application summary and correct any errors.</p></article>
-   <article class="step reveal"><b>04</b><h3>Send your enquiry</h3><p class="small">Open WhatsApp with a prepared message and choose whether to send it.</p></article>
-  </div>
- </div>
-</section>
-
-<section class="application" id="apply">
- <div class="container">
-  <div class="section-head reveal">
-   <span class="eyebrow" style="color:#ffe1a0">Application centre</span>
-   <h2>Start your support enquiry.</h2>
-   <p>Select your country first. The phone prefix and local currency update automatically. Enter the amount in the currency displayed.</p>
-  </div>
-  <div class="applygrid">
-   <aside class="sideinfo reveal">
-    <h3>Your country. Your currency.</h3>
-    <p>This form prepares an enquiry message for you to review. It does not make a funding decision or confirm programme availability.</p>
-    <ul>
-     <li>🌍 African country selection</li>
-     <li>☎️ Automatic international calling code</li>
-     <li>💱 Country-specific currency code</li>
-     <li>📝 Reviewable application summary</li>
-     <li>💬 WhatsApp message preparation</li>
-    </ul>
-   </aside>
-
-   <div class="formcard reveal">
-    <h3>Support application / enquiry</h3>
-    <p>Complete the fields below. Do not enter passwords, PINs or one-time security codes.</p>
-    <form id="applicationForm">
-     <div class="formgrid">
-      <div class="field full">
-       <label for="country">Select your African country *</label>
-       <select id="country" required>
-        <option value="">Choose your country</option>
-       </select>
-      </div>
-
-      <div class="field">
-       <label for="fullName">Full name *</label>
-       <input id="fullName" required maxlength="100" autocomplete="name" placeholder="Your full name">
-      </div>
-
-      <div class="field">
-       <label for="phone">Phone number *</label>
-       <div class="phonebox">
-        <div class="prefix" id="phonePrefix">+---</div>
-        <input id="phone" type="tel" inputmode="numeric" autocomplete="tel-national" required maxlength="18" placeholder="Local number only">
-       </div>
-       <span class="small muted">Country code is added automatically.</span>
-      </div>
-
-      <div class="field">
-       <label for="district">City / district *</label>
-       <input id="district" required maxlength="100" placeholder="Your city or district">
-      </div>
-
-      <div class="field">
-       <label for="programme">Programme *</label>
-       <select id="programme" required>
-        <option value="">Choose a programme</option>
-        <option>Family wellbeing</option>
-        <option>Education support</option>
-        <option>Livelihoods</option>
-        <option>Emergency relief</option>
-        <option>Community development</option>
-        <option>General support enquiry</option>
-       </select>
-      </div>
-
-      <div class="field">
-       <label for="amount">Amount requested *</label>
-       <input id="amount" type="number" min="1" max="1000000000" step="any" required placeholder="Enter the amount">
-      </div>
-
-      <div class="field">
-       <label>Selected currency</label>
-       <div class="currencybox"><strong id="currencyCode">—</strong><span id="currencyName">Choose your country</span></div>
-      </div>
-
-      <div class="field full">
-       <label for="purpose">Purpose of your enquiry *</label>
-       <textarea id="purpose" required maxlength="1200" placeholder="Briefly explain the support you are enquiring about."></textarea>
-      </div>
-     </div>
-
-     <div class="consent">
-      <input type="checkbox" id="consent" required>
-      <label for="consent">I confirm that my details are correct and understand that this form submits an enquiry for communication, not an automatic funding approval.</label>
-     </div>
-
-     <div class="formactions">
-      <button class="btn primary" type="submit" id="reviewButton">Review application →</button>
-      <button class="btn white" type="reset">Clear form</button>
-     </div>
-
-     <div class="progress" id="progress" aria-live="polite">
-      <strong id="progressText">Preparing your summary…</strong>
-      <div class="track"><div class="bar" id="bar"></div></div>
-      <p class="small">Preparing the information you entered.</p>
-     </div>
-
-     <div class="summary" id="summary" aria-live="polite">
-      <h3>Review your application</h3>
-      <div id="summaryRows"></div>
-      <div class="formactions">
-       <button type="button" class="btn white" id="editButton">← Edit details</button>
-       <button type="button" class="btn green" id="whatsappButton">Continue to WhatsApp ↗</button>
-      </div>
-      <p class="small" style="margin-top:12px">WhatsApp opens with a draft message. Review it before you send.</p>
-     </div>
-     <p id="message" role="status" class="small" style="margin-top:12px"></p>
-    </form>
-   </div>
-  </div>
- </div>
-</section>
-
-<section id="gallery">
- <div class="container">
-  <div class="section-head center reveal"><span class="eyebrow">Humanitarian work</span><h2>People helping people.</h2><p>Photography illustrating community service, education, volunteering and humanitarian care.</p></div>
-  <div class="grid g3">
-   <article class="card gallerycard reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=80" alt="Community volunteers working together"><div><h3>Community action</h3><p>People working together to strengthen their communities.</p></div></article>
-   <article class="card gallerycard reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80" alt="Children learning"><div><h3>Education opportunities</h3><p>Supporting learning, growth and future opportunities.</p></div></article>
-   <article class="card gallerycard reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80" alt="Children in a community"><div><h3>Family wellbeing</h3><p>Human dignity and care at the heart of support.</p></div></article>
-   <article class="card gallerycard reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=80" alt="Volunteers distributing relief supplies"><div><h3>Relief and assistance</h3><p>Organised community assistance and essential supplies.</p></div></article>
-   <article class="card gallerycard reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=80" alt="People collaborating on community work"><div><h3>Working together</h3><p>Collaboration helps community initiatives move forward.</p></div></article>
-   <article class="card gallerycard reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=80" alt="Community group meeting"><div><h3>Community participation</h3><p>Listening to communities and understanding their needs.</p></div></article>
-  </div>
- </div>
-</section>
-
-<section class="soft" id="faq">
- <div class="container">
-  <div class="section-head reveal"><span class="eyebrow">Help centre</span><h2>Frequently asked questions.</h2><p>Find general guidance about using the website and making an enquiry.</p></div>
-  <div class="faqgrid">
-   <div class="faqs reveal">
-    <details><summary>1. Which countries can use the form?</summary><p>The country selector includes 54 African countries and sets the corresponding international calling code and currency.</p></details>
-    <details><summary>2. How does the phone code work?</summary><p>Select your country, then type the rest of your phone number without repeating the country calling code.</p></details>
-    <details><summary>3. How is my currency selected?</summary><p>The currency code is automatically linked to the country you choose. The amount you enter is interpreted in that displayed currency.</p></details>
-    <details><summary>4. Can I choose the amount myself?</summary><p>Yes. Enter the amount you want to enquire about. It does not by itself establish eligibility or confirm funds are available.</p></details>
-    <details><summary>5. What happens when I submit?</summary><p>The page prepares a summary, then lets you open WhatsApp with the details in a draft message.</p></details>
-    <details><summary>6. Is the form an approval system?</summary><p>No. This single-file website prepares enquiries only. A genuine programme needs a verified review process and real programme information.</p></details>
-    <details><summary>7. How do I know programme details?</summary><p>Ask for the organisation's registration details, written programme rules, eligibility requirements and official contact information.</p></details>
-    <details><summary>8. Can I change my details?</summary><p>Yes. Select Edit details in the review summary to return to the form.</p></details>
-    <details><summary>9. Is the assistant a live person?</summary><p>No. It is a preset question-and-answer guide. It does not make funding decisions or verify identities.</p></details>
-    <details><summary>10. How can I protect my information?</summary><p>Only share information that is necessary with a verified contact. Never share a password, mobile-money PIN or one-time security code.</p></details>
-   </div>
-
-   <div class="chat reveal">
-    <div class="chathead"><div class="avatar">✦</div><div><h3 style="margin-bottom:2px">Support Guide</h3><span class="chatstatus">● Automated information assistant</span></div></div>
-    <div class="messages" id="messages" aria-live="polite"><div class="bubble">Hello! Choose a question and I will provide general guidance about the website.</div></div>
-    <div class="chatcontrols">
-     <select id="question" aria-label="Choose a question">
-      <option value="">Choose a question…</option>
-      <option value="country">Country selection</option>
-      <option value="phone">Phone number</option>
-      <option value="currency">Currency selection</option>
-      <option value="amount">Requested amount</option>
-      <option value="submit">Submitting an enquiry</option>
-      <option value="review">Reviewing details</option>
-      <option value="eligibility">Eligibility</option>
-      <option value="privacy">Privacy</option>
-      <option value="documents">Documents</option>
-      <option value="contact">Contact process</option>
-     </select>
-     <button class="btn primary" id="ask" type="button">Ask</button>
-    </div>
-   </div>
-  </div>
- </div>
-</section>
-
-<div class="cta"><div class="container ctainner"><div><h2>Ready to make an enquiry?</h2><p>Choose your country and local currency to get started.</p></div><a class="btn primary" href="#apply">Start here ↗</a></div></div>
-</main>
-
-<footer>
- <div class="container">
-  <div class="footgrid">
-   <div><div class="brand" style="margin-bottom:16px"><div class="logo">♡</div><div><strong style="color:white">HUMANITARIAN WORLD</strong><small style="color:#b8cce4;display:block">SUPPORT FUNDS · AFRICA</small></div></div><p>Humanitarian information and programme enquiry template for African countries.</p></div>
-   <div><h3>Explore</h3><ul><li><a href="#about">About us</a></li><li><a href="#programmes">Programmes</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#process">How it works</a></li></ul></div>
-   <div><h3>Support</h3><ul><li><a href="#faq">Help centre</a></li><li><a href="#apply">Application form</a></li><li><a href="#faq">Common questions</a></li></ul></div>
-   <div><h3>Contact</h3><p>WhatsApp enquiry channel</p><p style="color:white;font-weight:800;margin:8px 0">+254 789 697 483</p><p class="small">Confirm that this contact is authorised to receive enquiries for your organisation.</p></div>
-  </div>
-  <div class="footbottom"><p>© <span id="year"></span> Humanitarian World Support Funds.</p><p>Community · Dignity · Opportunity</p></div>
- </div>
-</footer>
-
-<div class="floatactions">
- <a class="floatbtn wa" href="https://wa.me/254789697483" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">◉</a>
- <a class="floatbtn call" href="tel:+254789697483" aria-label="Call">☎</a>
+<section class="hero" id="home"><div class="container heroIn">
+<span class="eyebrow">Community · Dignity · Opportunity</span>
+<h1>Hope for families.<br><span>Opportunity for all.</span></h1>
+<p>Explore humanitarian programme information and submit an enquiry for consideration. Select your country to view relevant identification and currency fields.</p>
+<div class="actions"><a class="btn gold" href="#programmes">Explore Programmes ↗</a><a class="btn light" href="#apply">Start Application</a></div>
+<div class="stats"><div><strong>Across Africa</strong><small>Country-specific details</small></div><div><strong>Step by step</strong><small>Guided application</small></div><div><strong>Review first</strong><small>Check before sending</small></div></div>
+</div></section>
+<section class="section" id="about"><div class="container about">
+<img loading="lazy" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=85" alt="Children in a community setting">
+<div><span class="eyebrow">Our purpose</span><h2>People and communities first.</h2><p class="muted">Explore information related to family wellbeing, education, livelihoods, emergency relief and community development.</p><ul class="check"><li>Clear application steps</li><li>Country-specific ID guidance</li><li>Review details before sending</li><li>Respect for personal information</li></ul><a href="#apply" class="btn primary">Make an Enquiry →</a></div>
+</div></section>
+<section class="section soft" id="programmes"><div class="container"><div class="head"><span class="eyebrow">Programme areas</span><h2>Choose the area that fits your request.</h2><p>Availability and eligibility must be confirmed by the programme administrator.</p></div>
+<div class="grid">
+<article class="card"><div class="ico">🏠</div><h3>Family Wellbeing</h3><p>Information relating to household needs and family wellbeing.</p></article>
+<article class="card"><div class="ico">📚</div><h3>Education Support</h3><p>Education-related opportunities and learning resources.</p></article>
+<article class="card"><div class="ico">🌱</div><h3>Livelihoods</h3><p>Skills, livelihoods and self-reliance initiatives.</p></article>
+<article class="card"><div class="ico">🧰</div><h3>Emergency Relief</h3><p>Information and referrals for urgent community needs.</p></article>
+<article class="card"><div class="ico">🤝</div><h3>Community Development</h3><p>Community initiatives and local development.</p></article>
+<article class="card"><div class="ico">💬</div><h3>General Enquiry</h3><p>Ask about programme information and requirements.</p></article>
+</div></div></section>
+<section class="section"><div class="container"><div class="head"><span class="eyebrow">Application journey</span><h2>Four clear steps.</h2></div><div class="steps">
+<div class="step"><b>1</b><h3>Personal details</h3><p class="muted">Enter your details accurately.</p></div>
+<div class="step"><b>2</b><h3>Identification</h3><p class="muted">Select ID type and add both sides where applicable.</p></div>
+<div class="step"><b>3</b><h3>Request details</h3><p class="muted">Provide your request and its source.</p></div>
+<div class="step"><b>4</b><h3>Review & send</h3><p class="muted">Review your message and send it yourself.</p></div>
+</div></div></section>
+<section class="section application" id="apply"><div class="container">
+<div class="head"><span class="eyebrow" style="color:#f6d38a">Application centre</span><h2>Complete your application step by step.</h2><p>Fields marked * are required. Provide accurate information only.</p></div>
+<div class="applygrid">
+<aside class="aside"><h3>Before you begin</h3><p>Keep your details ready and use clear, readable images if you choose to upload documents.</p><ul><li>Use your legal name.</li><li>Choose the country that issued your ID.</li><li>Make sure both ID sides are readable.</li><li>Do not share passwords, PINs or bank login details.</li><li>Submitting an enquiry does not guarantee approval.</li></ul></aside>
+<div class="formcard">
+<div class="stephead"><span class="stepnum" id="stepNum">STEP 1 OF 4</span><div><h3 id="stepTitle">Personal Details</h3><p id="stepSub">Tell us about yourself.</p></div></div>
+<div class="progressline" id="progressline"><span class="active"></span><span></span><span></span><span></span></div>
+<form id="appForm" novalidate>
+<div class="formstep active" data-step="0"><div class="fields">
+<div class="field full"><label for="country">Country of residence *</label><select id="country" required><option value="">Select country</option></select></div>
+<div class="field"><label for="fullName">Full legal name *</label><input id="fullName" autocomplete="name" maxlength="100" required placeholder="As shown on your ID"></div>
+<div class="field"><label for="dob">Date of birth *</label><input id="dob" type="date" required></div>
+<div class="field"><label for="age">Age</label><input id="age" readonly placeholder="Calculated from date of birth"></div>
+<div class="field"><label for="gender">Gender *</label><select id="gender" required><option value="">Select gender</option><option>Female</option><option>Male</option><option>Prefer not to say</option><option>Another identity</option></select></div>
+<div class="field"><label for="nationality">Nationality *</label><select id="nationality" required><option value="">Select nationality</option></select></div>
+<div class="field"><label for="occupation">Occupation *</label><select id="occupation" required><option value="">Select occupation</option><option>Employed</option><option>Self-employed / Business</option><option>Farmer</option><option>Student</option><option>Unemployed</option><option>Casual worker</option><option>Homemaker / Caregiver</option><option>Retired</option><option>Other</option></select></div>
+<div class="field"><label for="employment">Employment status *</label><select id="employment" required><option value="">Select status</option><option>Full-time</option><option>Part-time</option><option>Self-employed</option><option>Unemployed</option><option>Student</option><option>Retired</option><option>Other</option></select></div>
+<div class="field"><label for="email">Email (optional)</label><input id="email" type="email" autocomplete="email" maxlength="120" placeholder="you@example.com"></div>
+<div class="field"><label for="phone">Phone number *</label><div class="phonebox"><div class="prefix" id="prefix">+---</div><input id="phone" type="tel" inputmode="numeric" autocomplete="tel-national" required maxlength="18" placeholder="Local number"></div></div>
+<div class="field"><label for="city">City / District *</label><input id="city" required maxlength="100" placeholder="Your town or district"></div>
+<div class="field"><label for="address">Residential area *</label><input id="address" required maxlength="160" placeholder="Area / neighbourhood"></div>
+</div><div class="formnav"><span></span><button type="button" class="btn primary next">Continue to ID →</button></div></div>
+<div class="formstep" data-step="1"><div class="fields">
+<div class="field"><label for="idType">Identification type *</label><select id="idType" required><option value="">Select ID type</option><option>National ID card</option><option>NRC</option><option>Passport</option><option>Other government-issued ID</option></select><span class="hint" id="idHint">Select your country first.</span></div>
+<div class="field"><label for="idNumber">ID / document number *</label><input id="idNumber" required maxlength="60" autocomplete="off" placeholder="Document number"></div>
+<div class="field full"><label for="idFront">ID front image *</label><div class="uploadbox"><p class="hint">Upload a clear image of the front. Accepted: JPG, PNG, WEBP. Maximum 5 MB.</p><input id="idFront" type="file" accept="image/jpeg,image/png,image/webp" required><div class="preview" id="frontPreview"><span class="empty">Front image preview will appear here.</span></div></div></div>
+<div class="field full"><label for="idBack">ID back image *</label><div class="uploadbox"><p class="hint">Upload the back side. If your document has no back side, use an ID type appropriate to your document and follow the instructions provided by the issuing authority.</p><input id="idBack" type="file" accept="image/jpeg,image/png,image/webp" required><div class="preview" id="backPreview"><span class="empty">Back image preview will appear here.</span></div></div></div>
+<div class="field full"><label for="selfieFile">Selfie photo *</label><div class="uploadbox"><p class="hint">Choose a recent, clear selfie or take one with your camera in the next step.</p><input id="selfieFile" type="file" accept="image/jpeg,image/png,image/webp" required><div class="preview" id="selfiePreview"><span class="empty">Selfie preview will appear here.</span></div></div></div>
 </div>
-
+<div class="notice">Privacy: selected photos are previewed in this browser. This page does not upload them to a server. If you choose to send photos, you must attach them yourself in the WhatsApp conversation. Avoid sending identity documents unless you have verified the recipient.</div>
+<div class="formnav"><button type="button" class="btn light back">← Back</button><button type="button" class="btn primary next">Continue to request →</button></div></div>
+<div class="formstep" data-step="2"><div class="fields">
+<div class="field"><label for="programme">Programme area *</label><select id="programme" required><option value="">Select programme</option><option>Family wellbeing</option><option>Education support</option><option>Livelihoods</option><option>Emergency relief</option><option>Community development</option><option>General enquiry</option></select></div>
+<div class="field"><label for="amount">Amount requested *</label><input id="amount" type="number" min="1" max="1000000000" step="any" required placeholder="Enter amount"></div>
+<div class="field"><label>Currency</label><div class="currency" id="currency">Select country</div></div>
+<div class="field"><label for="household">Household size *</label><input id="household" type="number" min="1" max="100" required placeholder="Number of people"></div>
+<div class="field"><label for="income">Monthly household income *</label><select id="income" required><option value="">Select range</option><option>No current income</option><option>Low / irregular income</option><option>Under 250 USD equivalent</option><option>250–500 USD equivalent</option><option>501–1,000 USD equivalent</option><option>Over 1,000 USD equivalent</option><option>Prefer not to say</option></select><span class="hint">Choose the closest range; ranges are indicative.</span></div>
+<div class="field"><label for="urgency">Urgency *</label><select id="urgency" required><option value="">Select urgency</option><option>Immediate essential need</option><option>Within 30 days</option><option>Within 3 months</option><option>General / future support</option></select></div>
+<div class="field full"><label for="purpose">Reason for request *</label><textarea id="purpose" required maxlength="1500" placeholder="Explain your situation and how support would be used."></textarea></div>
+<div class="field full"><label for="source">How did you hear about this programme? *</label><select id="source" required><option value="">Select source</option><option>Presidential announcement (not independently verified here)</option><option>Official government website</option><option>Official programme announcement</option><option>Government office / public notice</option><option>Community leader</option><option>Radio</option><option>Television</option><option>Newspaper</option><option>Social media</option><option>Family or friend</option><option>NGO / community organisation</option><option>Other</option></select></div>
+<div class="field full"><label for="sourceDetail">Announcement / source details (optional)</label><input id="sourceDetail" maxlength="300" placeholder="Website, date, announcement title or referral"></div>
+</div><div class="formnav"><button type="button" class="btn light back">← Back</button><button type="button" class="btn primary next">Review application →</button></div></div>
+<div class="formstep" data-step="3"><h3 style="color:var(--navy)">Review before sending</h3><p class="hint">Check your details carefully. You can go back to edit any step.</p><div class="summary" id="summary" style="display:block"></div>
+<div class="consent"><input type="checkbox" id="accuracy" required><label for="accuracy">I confirm that the details are accurate and that I have the right to share any information included. I understand this is an enquiry and submission does not guarantee support.</label></div>
+<div class="consent"><input type="checkbox" id="privacy" required><label for="privacy">I understand that files selected on this page are not uploaded to a server by this page. If I choose to share documents through WhatsApp, I will attach them myself after verifying the recipient.</label></div>
+<div class="notice">The WhatsApp message will contain the form details but not the image files. Attach ID images only if necessary and only after verifying who will receive them.</div>
+<div class="formnav"><button type="button" class="btn light back">← Edit</button><button type="button" class="btn primary" id="send">Continue to WhatsApp ↗</button></div>
+<p class="hint" id="finalMessage" role="status"></p></div>
+</form>
+</div></div></div></section>
+<section class="section soft" id="faq"><div class="container"><div class="head"><span class="eyebrow">Help centre</span><h2>Frequently asked questions</h2></div><div class="faq">
+<details><summary>Who can submit an enquiry?</summary><p>People may submit an enquiry from a listed country. Eligibility and programme availability must be confirmed by the programme administrator.</p></details>
+<details><summary>Are my ID images uploaded to this website?</summary><p>This single-page website previews selected images in your browser and does not send them to a server. If you choose to share them, you must attach them yourself in WhatsApp.</p></details>
+<details><summary>Does submitting a form guarantee support?</summary><p>No. An enquiry is not an approval or guarantee of funding. Confirm programme details and the identity of the organisation before sharing sensitive documents.</p></details>
+</div></div></section>
+<div class="cta"><div class="container ct ain"><div><h2>Need to make an enquiry?</h2><p>Complete the steps and review your details.</p></div><a class="btn primary" href="#apply">Start Application ↗</a></div></div>
+</main>
+<footer><div class="container"><div class="footgrid"><div><div class="brand" style="color:white;margin-bottom:12px"><span class="brandmark">♡</span><span style="color:white">HUMANITARIAN WORLD<small style="color:#c4d6eb">SUPPORT ENQUIRIES · AFRICA</small></span></div><p>Humanitarian programme information and enquiries.</p></div><div><h3>Explore</h3><ul><li><a href="#about">About</a></li><li><a href="#programmes">Programmes</a></li><li><a href="#apply">Application</a></li></ul></div><div><h3>Help</h3><ul><li><a href="#faq">FAQs</a></li><li><a href="#apply">Make an enquiry</a></li></ul></div></div><div class="footbottom">© <span id="year"></span> Humanitarian World Support. Verify the programme operator before sharing personal documents.</div></div></footer>
+<div class="floaters"><a class="wa" href="https://wa.me/254789697483" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">◉</a><a class="call" href="tel:+254789697483" aria-label="Call">☎</a></div>
 <script>
 "use strict";
-
-/*
- African country data:
- name, flag, international calling code,
- ISO 4217 currency code, currency name.
- Currency codes describe the country's primary currency.
-*/
-
-const countries = [
- {n:"Algeria",f:"🇩🇿",d:"+213",c:"DZD",m:"Algerian dinar"},
- {n:"Angola",f:"🇦🇴",d:"+244",c:"AOA",m:"Angolan kwanza"},
- {n:"Benin",f:"🇧🇯",d:"+229",c:"XOF",m:"West African CFA franc"},
- {n:"Botswana",f:"🇧🇼",d:"+267",c:"BWP",m:"Botswana pula"},
- {n:"Burkina Faso",f:"🇧🇫",d:"+226",c:"XOF",m:"West African CFA franc"},
- {n:"Burundi",f:"🇧🇮",d:"+257",c:"BIF",m:"Burundian franc"},
- {n:"Cabo Verde",f:"🇨🇻",d:"+238",c:"CVE",m:"Cape Verdean escudo"},
- {n:"Cameroon",f:"🇨🇲",d:"+237",c:"XAF",m:"Central African CFA franc"},
- {n:"Central African Republic",f:"🇨🇫",d:"+236",c:"XAF",m:"Central African CFA franc"},
- {n:"Chad",f:"🇹🇩",d:"+235",c:"XAF",m:"Central African CFA franc"},
- {n:"Comoros",f:"🇰🇲",d:"+269",c:"KMF",m:"Comorian franc"},
- {n:"Republic of the Congo",f:"🇨🇬",d:"+242",c:"XAF",m:"Central African CFA franc"},
- {n:"Democratic Republic of the Congo",f:"🇨🇩",d:"+243",c:"CDF",m:"Congolese franc"},
- {n:"Côte d’Ivoire",f:"🇨🇮",d:"+225",c:"XOF",m:"West African CFA franc"},
- {n:"Djibouti",f:"🇩🇯",d:"+253",c:"DJF",m:"Djiboutian franc"},
- {n:"Egypt",f:"🇪🇬",d:"+20",c:"EGP",m:"Egyptian pound"},
- {n:"Equatorial Guinea",f:"🇬🇶",d:"+240",c:"XAF",m:"Central African CFA franc"},
- {n:"Eritrea",f:"🇪🇷",d:"+291",c:"ERN",m:"Eritrean nakfa"},
- {n:"Eswatini",f:"🇸🇿",d:"+268",c:"SZL",m:"Swazi lilangeni"},
- {n:"Ethiopia",f:"🇪🇹",d:"+251",c:"ETB",m:"Ethiopian birr"},
- {n:"Gabon",f:"🇬🇦",d:"+241",c:"XAF",m:"Central African CFA franc"},
- {n:"The Gambia",f:"🇬🇲",d:"+220",c:"GMD",m:"Gambian dalasi"},
- {n:"Ghana",f:"🇬🇭",d:"+233",c:"GHS",m:"Ghanaian cedi"},
- {n:"Guinea",f:"🇬🇳",d:"+224",c:"GNF",m:"Guinean franc"},
- {n:"Guinea-Bissau",f:"🇬🇼",d:"+245",c:"XOF",m:"West African CFA franc"},
- {n:"Kenya",f:"🇰🇪",d:"+254",c:"KES",m:"Kenyan shilling"},
- {n:"Lesotho",f:"🇱🇸",d:"+266",c:"LSL",m:"Lesotho loti"},
- {n:"Liberia",f:"🇱🇷",d:"+231",c:"LRD",m:"Liberian dollar"},
- {n:"Libya",f:"🇱🇾",d:"+218",c:"LYD",m:"Libyan dinar"},
- {n:"Madagascar",f:"🇲🇬",d:"+261",c:"MGA",m:"Malagasy ariary"},
- {n:"Malawi",f:"🇲🇼",d:"+265",c:"MWK",m:"Malawian kwacha"},
- {n:"Mali",f:"🇲🇱",d:"+223",c:"XOF",m:"West African CFA franc"},
- {n:"Mauritania",f:"🇲🇷",d:"+222",c:"MRU",m:"Mauritanian ouguiya"},
- {n:"Mauritius",f:"🇲🇺",d:"+230",c:"MUR",m:"Mauritian rupee"},
- {n:"Morocco",f:"🇲🇦",d:"+212",c:"MAD",m:"Moroccan dirham"},
- {n:"Mozambique",f:"🇲🇿",d:"+258",c:"MZN",m:"Mozambican metical"},
- {n:"Namibia",f:"🇳🇦",d:"+264",c:"NAD",m:"Namibian dollar"},
- {n:"Niger",f:"🇳🇪",d:"+227",c:"XOF",m:"West African CFA franc"},
- {n:"Nigeria",f:"🇳🇬",d:"+234",c:"NGN",m:"Nigerian naira"},
- {n:"Rwanda",f:"🇷🇼",d:"+250",c:"RWF",m:"Rwandan franc"},
- {n:"São Tomé and Príncipe",f:"🇸🇹",d:"+239",c:"STN",m:"São Tomé and Príncipe dobra"},
- {n:"Senegal",f:"🇸🇳",d:"+221",c:"XOF",m:"West African CFA franc"},
- {n:"Seychelles",f:"🇸🇨",d:"+248",c:"SCR",m:"Seychellois rupee"},
- {n:"Sierra Leone",f:"🇸🇱",d:"+232",c:"SLE",m:"Sierra Leonean leone"},
- {n:"Somalia",f:"🇸🇴",d:"+252",c:"SOS",m:"Somali shilling"},
- {n:"South Africa",f:"🇿🇦",d:"+27",c:"ZAR",m:"South African rand"},
- {n:"South Sudan",f:"🇸🇸",d:"+211",c:"SSP",m:"South Sudanese pound"},
- {n:"Sudan",f:"🇸🇩",d:"+249",c:"SDG",m:"Sudanese pound"},
- {n:"Tanzania",f:"🇹🇿",d:"+255",c:"TZS",m:"Tanzanian shilling"},
- {n:"Togo",f:"🇹🇬",d:"+228",c:"XOF",m:"West African CFA franc"},
- {n:"Tunisia",f:"🇹🇳",d:"+216",c:"TND",m:"Tunisian dinar"},
- {n:"Uganda",f:"🇺🇬",d:"+256",c:"UGX",m:"Ugandan shilling"},
- {n:"Zambia",f:"🇿🇲",d:"+260",c:"ZMW",m:"Zambian kwacha"},
- {n:"Zimbabwe",f:"🇿🇼",d:"+263",c:"ZWG",m:"Zimbabwe Gold"}
-];
-
-/* Change this to the verified WhatsApp contact for your programme. */
-const WHATSAPP_NUMBER = "254789697483";
-const $ = id => document.getElementById(id);
-
-$("year").textContent = new Date().getFullYear();
-
-/* Populate country selector */
-const countrySelect = $("country");
-countries.sort((a,b)=>a.n.localeCompare(b.n)).forEach(country=>{
- const option = document.createElement("option");
- option.value = country.n;
- option.textContent = country.f+" "+country.n;
- countrySelect.appendChild(option);
-});
-
-function chosenCountry(){
- return countries.find(c=>c.n===countrySelect.value);
-}
-
-function updateCountry(){
- const country = chosenCountry();
- if(!country){
-  $("phonePrefix").textContent="+---";
-  $("currencyCode").textContent="—";
-  $("currencyName").textContent="Choose your country";
-  $("amount").placeholder="Choose a country first";
-  return;
- }
- $("phonePrefix").textContent=country.d;
- $("currencyCode").textContent=country.c;
- $("currencyName").textContent=country.m;
- $("amount").placeholder="Amount in "+country.c;
-}
-countrySelect.addEventListener("change",updateCountry);
-
-/* Phone input accepts only the national part; prefix is fixed by country selection. */
-$("phone").addEventListener("input",()=>{
- $("phone").value=$("phone").value.replace(/[^\d\s()-]/g,"").replace(/^\s+/,"");
-});
-
-/* Mobile navigation */
-$("menu").addEventListener("click",()=>{
- const open=$("navlinks").classList.toggle("open");
- $("menu").textContent=open?"×":"☰";
- $("menu").setAttribute("aria-expanded",String(open));
-});
-document.querySelectorAll("#navlinks a").forEach(a=>a.addEventListener("click",()=>{
- $("navlinks").classList.remove("open");
- $("menu").textContent="☰";
- $("menu").setAttribute("aria-expanded","false");
-}));
-
-/* Entrance animations */
-if("IntersectionObserver" in window){
- const io=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-   if(entry.isIntersecting){
-    entry.target.classList.add("visible");
-    io.unobserve(entry.target);
-   }
-  });
- },{threshold:.12});
- document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
-}else{
- document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
-}
-
-/* Preselect programme from cards */
-document.querySelectorAll("[data-program]").forEach(link=>{
- link.addEventListener("click",()=>{
-  $("programme").value=link.dataset.program;
- });
-});
-
-function escapeHTML(value){
- return String(value).replace(/[&<>"']/g,ch=>({
-  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
- }[ch]));
-}
-function formatAmount(value,currency){
- try{
-  return new Intl.NumberFormat("en",{maximumFractionDigits:2}).format(Number(value))+" "+currency;
- }catch(e){
-  return value+" "+currency;
- }
-}
-
-let currentMessage="";
-let progressTimer=null;
-
-function getData(){
- const country=chosenCountry();
- const localNumber=$("phone").value.replace(/\D/g,"");
- return {
-  country:country,
-  name:$("fullName").value.trim(),
-  phone:country.d+" "+localNumber,
-  district:$("district").value.trim(),
-  programme:$("programme").value,
-  amount:formatAmount($("amount").value,country.c),
-  currency:country.c,
-  purpose:$("purpose").value.trim()
- };
-}
-
-function makeWhatsAppMessage(d){
- return [
-  "HUMANITARIAN WORLD SUPPORT FUNDS — PROGRAMME ENQUIRY",
-  "",
-  "Country: "+d.country.n,
-  "Name: "+d.name,
-  "Phone: "+d.phone,
-  "City/District: "+d.district,
-  "Programme: "+d.programme,
-  "Amount requested: "+d.amount,
-  "Purpose: "+d.purpose,
-  "",
-  "Please provide the programme's written eligibility criteria, application process and official information."
- ].join("\n");
-}
-
-function showSummary(d){
- const rows=[
-  ["Country",d.country.f+" "+d.country.n],
-  ["Full name",d.name],
-  ["Phone number",d.phone],
-  ["City / district",d.district],
-  ["Programme",d.programme],
-  ["Amount requested",d.amount],
-  ["Purpose",d.purpose]
- ];
- $("summaryRows").innerHTML=rows.map(row=>
-  '<div class="summaryrow"><span>'+escapeHTML(row[0])+
-  '</span><strong style="text-align:right;max-width:65%;overflow-wrap:anywhere">'+
-  escapeHTML(row[1])+'</strong></div>'
- ).join("");
-}
-
-$("applicationForm").addEventListener("submit",event=>{
- event.preventDefault();
- if(!$("applicationForm").reportValidity())return;
-
- const country=chosenCountry();
- if(!country){
-  $("message").textContent="Please choose your country.";
-  return;
- }
- if(!$("consent").checked){
-  $("message").textContent="Please confirm the statement before continuing.";
-  return;
- }
- const localDigits=$("phone").value.replace(/\D/g,"");
- if(localDigits.length<5){
-  $("message").textContent="Please enter a valid local phone number.";
-  $("phone").focus();
-  return;
- }
-
- clearInterval(progressTimer);
- const data=getData();
- currentMessage=makeWhatsAppMessage(data);
-
- $("summary").style.display="none";
- $("progress").style.display="block";
- $("bar").style.width="0%";
- $("message").textContent="";
- $("reviewButton").disabled=true;
- let amount=0;
-
- progressTimer=setInterval(()=>{
-  amount=Math.min(100,amount+5);
-  $("bar").style.width=amount+"%";
-  $("progressText").textContent=amount<40
-   ?"Preparing your application summary…"
-   :amount<80
-   ?"Organising your selected country and currency…"
-   :"Finalising your summary…";
-
-  if(amount>=100){
-   clearInterval(progressTimer);
-   progressTimer=null;
-   $("progressText").textContent="Your summary is ready.";
-   showSummary(data);
-   $("summary").style.display="block";
-   $("reviewButton").disabled=false;
-   $("summary").scrollIntoView({behavior:"smooth",block:"nearest"});
-  }
- },100);
-});
-
-$("editButton").addEventListener("click",()=>{
- $("summary").style.display="none";
- $("progress").style.display="none";
- $("fullName").focus();
-});
-
-$("whatsappButton").addEventListener("click",()=>{
- if(!currentMessage)return;
- const url="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(currentMessage);
- window.open(url,"_blank","noopener,noreferrer");
-});
-
-$("applicationForm").addEventListener("reset",()=>{
- clearInterval(progressTimer);
- progressTimer=null;
- currentMessage="";
- $("summary").style.display="none";
- $("progress").style.display="none";
- $("bar").style.width="0%";
- $("reviewButton").disabled=false;
- $("message").textContent="";
- setTimeout(updateCountry,0);
-});
-
-/* Preset help assistant — not a live AI model */
-const replies={
- country:"Choose one of the 54 listed African countries. The website updates the international calling prefix and currency code automatically.",
- phone:"Enter the national part of your number only. The fixed country prefix appears beside the phone field and is included in the prepared message.",
- currency:"The currency code is associated with the selected country. The amount is displayed with that code, for example KES for Kenya and ZMW for Zambia.",
- amount:"Enter the amount you want to enquire about. The form records your chosen amount and currency; it does not determine eligibility or availability.",
- submit:"Complete the form, select Review application, check your summary, then choose Continue to WhatsApp to open a prepared draft.",
- review:"Choose Edit details if you need to change your name, phone number, country, currency, amount or purpose before opening WhatsApp.",
- eligibility:"Eligibility requirements depend on the actual programme. Ask the programme operator for written criteria and independently verify its details.",
- privacy:"Share only necessary information with a contact you have verified. This page does not store application details in a database.",
- documents:"Ask the verified programme operator which documents are required. Never share a mobile-money PIN, password or one-time security code.",
- contact:"The form prepares a WhatsApp draft for the configured contact. Check the recipient and message before pressing Send."
-};
-
-$("ask").addEventListener("click",()=>{
- const key=$("question").value;
- if(!key)return;
- const messages=$("messages");
- const q=document.createElement("div");
- q.className="bubble me";
- q.textContent=$("question").selectedOptions[0].textContent;
- const a=document.createElement("div");
- a.className="bubble";
- a.textContent=replies[key];
- messages.append(q,a);
- messages.scrollTop=messages.scrollHeight;
-});
+const WHATSAPP="254789697483";
+const countries=[
+["Algeria","🇩🇿","+213","DZD","Algerian dinar"],["Angola","🇦🇴","+244","AOA","Angolan kwanza"],["Benin","🇧🇯","+229","XOF","West African CFA franc"],["Botswana","🇧🇼","+267","BWP","Botswana pula"],["Burkina Faso","🇧🇫","+226","XOF","West African CFA franc"],["Burundi","🇧🇮","+257","BIF","Burundian franc"],["Cabo Verde","🇨🇻","+238","CVE","Cape Verdean escudo"],["Cameroon","🇨🇲","+237","XAF","Central African CFA franc"],["Central African Republic","🇨🇫","+236","XAF","Central African CFA franc"],["Chad","🇹🇩","+235","XAF","Central African CFA franc"],["Comoros","🇰🇲","+269","KMF","Comorian franc"],["Republic of the Congo","🇨🇬","+242","XAF","Central African CFA franc"],["Democratic Republic of the Congo","🇨🇩","+243","CDF","Congolese franc"],["Côte d’Ivoire","🇨🇮","+225","XOF","West African CFA franc"],["Djibouti","🇩🇯","+253","DJF","Djiboutian franc"],["Egypt","🇪🇬","+20","EGP","Egyptian pound"],["Equatorial Guinea","🇬🇶","+240","XAF","Central African CFA franc"],["Eritrea","🇪🇷","+291","ERN","Eritrean nakfa"],["Eswatini","🇸🇿","+268","SZL","Swazi lilangeni"],["Ethiopia","🇪🇹","+251","ETB","Ethiopian birr"],["Gabon","🇬🇦","+241","XAF","Central African CFA franc"],["The Gambia","🇬🇲","+220","GMD","Gambian dalasi"],["Ghana","🇬🇭","+233","GHS","Ghanaian cedi"],["Guinea","🇬🇳","+224","GNF","Guinean franc"],["Guinea-Bissau","🇬🇼","+245","XOF","West African CFA franc"],["Kenya","🇰🇪","+254","KES","Kenyan shilling"],["Lesotho","🇱🇸","+266","LSL","Lesotho loti"],["Liberia","🇱🇷","+231","LRD","Liberian dollar"],["Libya","🇱🇾","+218","LYD","Libyan dinar"],["Madagascar","🇲🇬","+261","MGA","Malagasy ariary"],["Malawi","🇲🇼","+265","MWK","Malawian kwacha"],["Mali","🇲🇱","+223","XOF","West African CFA franc"],["Mauritania","🇲🇷","+222","MRU","Mauritanian ouguiya"],["Mauritius","🇲🇺","+230","MUR","Mauritian rupee"],["Morocco","🇲🇦","+212","MAD","Moroccan dirham"],["Mozambique","🇲🇿","+258","MZN","Mozambican metical"],["Namibia","🇳🇦","+264","NAD","Namibian dollar"],["Niger","🇳🇪","+227","XOF","West African CFA franc"],["Nigeria","🇳🇬","+234","NGN","Nigerian naira"],["Rwanda","🇷🇼","+250","RWF","Rwandan franc"],["São Tomé and Príncipe","🇸🇹","+239","STN","São Tomé and Príncipe dobra"],["Senegal","🇸🇳","+221","XOF","West African CFA franc"],["Seychelles","🇸🇨","+248","SCR","Seychellois rupee"],["Sierra Leone","🇸🇱","+232","SLE","Sierra Leonean leone"],["Somalia","🇸🇴","+252","SOS","Somali shilling"],["South Africa","🇿🇦","+27","ZAR","South African rand"],["South Sudan","🇸🇸","+211","SSP","South Sudanese pound"],["Sudan","🇸🇩","+249","SDG","Sudanese pound"],["Tanzania","🇹🇿","+255","TZS","Tanzanian shilling"],["Togo","🇹🇬","+228","XOF","West African CFA franc"],["Tunisia","🇹🇳","+216","TND","Tunisian dinar"],["Uganda","🇺🇬","+256","UGX","Ugandan shilling"],["Zambia","🇿🇲","+260","ZMW","Zambian kwacha"],["Zimbabwe","🇿🇼","+263","ZWG","Zimbabwe Gold"]
+].map(([name,flag,dial,currency,currencyName])=>({name,flag,dial,currency,currencyName})).sort((a,b)=>a.name.localeCompare(b.name));
+const $=id=>document.getElementById(id);
+$("year").textContent=new Date().getFullYear();
+function fillSelect(id,withFlags){countries.forEach(c=>{let o=document.createElement("option");o.value=c.name;o.textContent=withFlags?c.flag+" "+c.name:c.name;$ (id).appendChild(o)})}
+fillSelect("country",true);fillSelect("nationality",false);
+function chosen(){return countries.find(c=>c.name===$("country").value)}
+function updateCountry(){const c=chosen();$("prefix").textContent=c?c.dial:"+---";$("currency").textContent=c?c.currency+" — "+c.currencyName:"Select country";if(!c)return;
+if(c.name==="Kenya"){$("idType").value="National ID card";$("idHint").textContent="Kenya: use the National ID card number."}
+else if(c.name==="Zambia"){$("idType").value="NRC";$("idHint").textContent="Zambia: use the National Registration Card (NRC) number."}
+else{$("idType").value="";$("idHint").textContent="Use the ID type accepted in your country, or a valid passport where appropriate."}}
+$("country").addEventListener("change",updateCountry);
+const today=new Date();$("dob").max=[today.getFullYear(),String(today.getMonth()+1).padStart(2,"0"),String(today.getDate()).padStart(2,"0")].join("-");
+$("dob").addEventListener("change",()=>{if(!$("dob").value){$("age").value="";return}const d=new Date($("dob").value+"T00:00:00");let age=today.getFullYear()-d.getFullYear();if(today.getMonth()<d.getMonth()||(today.getMonth()===d.getMonth()&&today.getDate()<d.getDate()))age--;$("age").value=age>=0?age:"";});
+$("menu").addEventListener("click",()=>{$("links").classList.toggle("open")});document.querySelectorAll("#links a").forEach(a=>a.addEventListener("click",()=>$("links").classList.remove("open")));
+let current=0;
+const titles=["Personal Details","Identification & Photos","Support Request","Review & Send"];
+const subs=["Tell us about yourself.","Add your ID and photos.","Describe your support request.","Check all details before sending."];
+function setStep(n){current=n;document.querySelectorAll(".formstep").forEach((el,i)=>el.classList.toggle("active",i===n));$("stepNum").textContent="STEP "+(n+1)+" OF 4";$("stepTitle").textContent=titles[n];$("stepSub").textContent=subs[n];[...$("progressline").children].forEach((el,i)=>el.classList.toggle("active",i<=n));if(n===3)buildSummary();$("apply").scrollIntoView({behavior:"smooth",block:"start"})}
+function validateStep(n){const step=document.querySelector('.formstep[data-step="'+n+'"]');for(const el of step.querySelectorAll("input,select,textarea")){if(el.type==="checkbox"||el.type==="file"||el.readOnly)continue;if(!el.checkValidity()){el.reportValidity();el.focus();return false}}
+if(n===0){if(!$("country").value||!$("nationality").value){alert("Please select your country and nationality.");return false}if(Number($("age").value)<18){alert("This application form is intended for adults aged 18 or over. A guardian-led process would need to be provided separately.");return false}if($("phone").value.replace(/\D/g,"").length<5){alert("Enter a valid phone number.");return false}}
+if(n===1){for(const id of ["idFront","idBack","selfieFile"]){const f=$(id).files[0];if(!f){alert("Please select all required images.");return false}if(!["image/jpeg","image/png","image/webp"].includes(f.type)){alert("Please use JPG, PNG or WEBP images.");return false}if(f.size>5*1024*1024){alert("Each image must be 5 MB or smaller.");return false}}}
+return true}
+document.querySelectorAll(".next").forEach(b=>b.addEventListener("click",()=>{if(validateStep(current))setStep(Math.min(3,current+1))}));
+document.querySelectorAll(".back").forEach(b=>b.addEventListener("click",()=>setStep(Math.max(0,current-1))));
+function previewFile(input,container){const f=input.files&&input.files[0];container.innerHTML="";if(!f){container.innerHTML='<span class="empty">No image selected.</span>';return}if(!["image/jpeg","image/png","image/webp"].includes(f.type)){input.value="";container.innerHTML='<span class="empty">Choose a JPG, PNG or WEBP image.</span>';return}if(f.size>5*1024*1024){input.value="";container.innerHTML='<span class="empty">Image is too large. Maximum 5 MB.</span>';return}const img=document.createElement("img");img.alt="Selected image preview";img.src=URL.createObjectURL(f);img.onload=()=>URL.revokeObjectURL(img.src);container.appendChild(img);const tag=document.createElement("span");tag.className="empty";tag.textContent="Selected: "+f.name;container.appendChild(tag)}
+[["idFront","frontPreview"],["idBack","backPreview"],["selfieFile","selfiePreview"]].forEach(([a,b])=>$(a).addEventListener("change",()=>previewFile($(a),$(b))));
+function safe(s){return String(s??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch]))}
+function amountString(){const c=chosen();return new Intl.NumberFormat("en",{maximumFractionDigits:2}).format(Number($("amount").value))+" "+(c?c.currency:"")}
+function dataRows(){const c=chosen();return[
+["Country of residence",c?c.name:""],["Full legal name",$("fullName").value],["Date of birth",$("dob").value],["Age",$("age").value],["Gender",$("gender").value],["Nationality",$("nationality").value],["Occupation",$("occupation").value],["Employment status",$("employment").value],["Email",$("email").value||"Not provided"],["Phone",c?c.dial+" "+$("phone").value:""],["City / District",$("city").value],["Residential area",$("address").value],["ID type",$("idType").value],["ID / document number",$("idNumber").value],["ID front image",$("idFront").files[0]?.name||"Not selected"],["ID back image",$("idBack").files[0]?.name||"Not selected"],["Selfie",$("selfieFile").files[0]?.name||"Not selected"],["Programme",$("programme").value],["Amount requested",amountString()],["Household size",$("household").value],["Monthly household income",$("income").value],["Urgency",$("urgency").value],["Reason for request",$("purpose").value],["Source of information",$("source").value],["Source details",$("sourceDetail").value||"Not provided"]]}
+function buildSummary(){$("summary").innerHTML=dataRows().map(([a,b])=>'<div class="summaryrow"><span>'+safe(a)+'</span><strong style="text-align:right;max-width:62%;overflow-wrap:anywhere">'+safe(b)+'</strong></div>').join("")}
+$("send").addEventListener("click",()=>{if(!$("accuracy").checked||!$("privacy").checked){alert("Please confirm both statements before continuing.");return}const rows=dataRows();const text=["HUMANITARIAN WORLD SUPPORT — APPLICATION ENQUIRY","",...rows.map(([a,b])=>a+": "+b),"","Please advise on programme requirements and next steps.","","Note: selected image files are not attached to this WhatsApp message."];const url="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(text.join("\n"));window.open(url,"_blank","noopener,noreferrer");$("finalMessage").textContent="WhatsApp opened with your text summary. Attach any images yourself only after verifying the recipient."});
+/* Optional camera preview: the browser requests permission; frames are not transmitted. */
+let stream=null;
+function cameraMarkup(){return}
+$("appForm").addEventListener("reset",()=>{stopCamera();setTimeout(()=>{setStep(0);updateCountry();$("age").value="";["frontPreview","backPreview","selfiePreview"].forEach(id=>$(id).innerHTML='<span class="empty">No image selected.</span>')},0)});
+/* Camera controls are created in the identification section without uploading anything. */
+const selfieBox=$("selfieFile").closest(".uploadbox");
+const camWrap=document.createElement("div");camWrap.innerHTML='<div class="camera"><video id="cameraVideo" class="hidden" autoplay playsinline muted></video><div id="cameraPlaceholder" class="cameraPlaceholder">📷<br>Camera preview appears here after permission is granted.</div></div><div class="cameraActions"><button type="button" class="btn primary" id="startCamera">Open camera</button><button type="button" class="btn light" id="captureSelfie" disabled>Capture selfie</button><button type="button" class="btn light" id="stopCamera" disabled>Stop camera</button></div><div id="cameraStatus" class="status">Camera is off. You can upload a selfie instead.</div><canvas id="cameraCanvas" hidden></canvas>';
+selfieBox.appendChild(camWrap);
+function setStatus(msg,type){const s=$("cameraStatus");s.textContent=msg;s.className="status"+(type?" "+type:"")}
+async function startCamera(){if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){setStatus("This browser does not support camera access. Upload a selfie instead.","bad");return}try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"user"},audio:false});$("cameraVideo").srcObject=stream;$("cameraVideo").classList.remove("hidden");$("cameraPlaceholder").classList.add("hidden");$("captureSelfie").disabled=false;$("stopCamera").disabled=false;$("startCamera").disabled=true;setStatus("Camera is ready. Face the camera, keep your full face visible, look forward and use good lighting.","good")}catch(e){setStatus("Camera access was not granted or is unavailable. You can upload a selfie instead.","bad")}}
+function stopCamera(){if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}const v=$("cameraVideo");if(v){v.srcObject=null;v.classList.add("hidden");$("cameraPlaceholder").classList.remove("hidden");$("captureSelfie").disabled=true;$("stopCamera").disabled=true;$("startCamera").disabled=false}}
+$("startCamera").addEventListener("click",startCamera);$("stopCamera").addEventListener("click",()=>{stopCamera();setStatus("Camera stopped. No camera frames were sent.","")});
+$("captureSelfie").addEventListener("click",()=>{const v=$("cameraVideo");if(!stream||!v.videoWidth){setStatus("Wait until the camera preview is ready.","bad");return}const canvas=$("cameraCanvas");canvas.width=v.videoWidth;canvas.height=v.videoHeight;const ctx=canvas.getContext("2d");ctx.translate(canvas.width,0);ctx.scale(-1,1);ctx.drawImage(v,0,0,canvas.width,canvas.height);canvas.toBlob(blob=>{if(!blob){setStatus("Could not capture image. Try uploading a selfie instead.","bad");return}const file=new File([blob],"selfie-capture.jpg",{type:"image/jpeg"});const dt=new DataTransfer();dt.items.add(file);$("selfieFile").files=dt.files;previewFile($("selfieFile"),$("selfiePreview"));setStatus("Selfie captured for local preview. Check it yourself; this page does not verify identity or eye direction.","good");stopCamera()}, "image/jpeg",.9)});
+window.addEventListener("pagehide",stopCamera);
 </script>
 </body>
 </html>
